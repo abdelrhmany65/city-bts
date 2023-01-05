@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    font-family: 'Lora', serif;
+}
+:root{
+    --min-color: #fff;
+    --read-color: #ff3d1c;
+    --grean-color: #31ff7a;
+
+}
+html{
+    font-size: 60%;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgb(167, 167, 167);
+    background: none;
+    z-index: 2;
+}
+.home{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)) ,url(../img/hero/h1_hero.jpg) no-repeat center;
+    min-height: 100vh;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul li a{
+    color: var(--min-color);
+}
+.navbar ul li a:hover,
+.navbar .nav-link.active{
+    color: var(--read-color);
+}
+.navbar ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--read-color);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}
+.home h3{
+    color: var(--grean-color);
+    font-size: 35px;
+    padding: 10px;
+}
+.home .input-group,
+.home .input-group2{
+    width: 60%;
+    margin: auto;
+    box-shadow: 0rem 0.2rem 0.2rem var(--th-color);
+}
+.home .input-group input,
+.home .input-group2 input{
+    height: 60px;
+    padding: 10px;
+    font-size: 18px;
+    border: 8px solid rgba(255,255,255,0.2);
+}
+.home .input-group span{
+    font-size: 20px;
+    background: var(--read-color);
+    color: var(--min-color);
+    border: 0;
+}
+.home button{
+    background: var(--read-color);
+    color: var(--min-color);
+    display: none;
+}
+.heading h4{
+    color: var(--read-color);
+
+}
+.Popular .row .images{
+    position: relative;
+    
+}
+.Popular .row .images img{
+    position: relative;
+    width: 100%;
+} 
+.Popular .content h6 {
+    color: var(--min-color);
+    font-size: 35px;
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+}
+.Popular .content span{
+    background: var(--min-color);
+    color: var(--read-color);
+    padding: 0.5rem 0.8rem;
+    font-size: 22px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    opacity: 0;
+}
+.Popular .images:hover .content span{
+    bottom: 20px;
+    opacity: 1;
+}
+.Popular .images:hover .content h6{
+    
+    bottom: 60px;
+}
+.works{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)) ,url(../img/section_bg02.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 0;
+}
+.works i{
+    padding: 10px 16px;
+    font-size: 50px;
+    background: var(--min-color);
+    color: var(--read-color);
+    border-radius: 50%;
+}
+.categoris .content{
+    position: relative;
+}
+.categoris .content::after{
+    content:"";
+    width: 100%;
+    height: 0%;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background: rgba(5, 5, 5, 0.2);
+    position: absolute;
+    transition: all 0.5s linear;
+}
+.categoris .content:Hover::after{
+    height: 100%;
+   
+}
+.pages .images{
+    width: 50%;
+}
+.pages .images img{
+    width: 100%;
+    object-fit: cover;
+}
+.subscripe{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)) ,url(../img/hero/hero2.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 0;
+}
+.client img{
+    width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:767px){
+    html{
+        font-size: 50%;
+    }
+    .home .input-group{
+        display: none;
+    }
+    .home button{
+        display: block;
+        margin: auto;
+        width: 120px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
